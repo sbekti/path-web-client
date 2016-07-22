@@ -103,7 +103,10 @@ class SignInDialog extends React.Component {
                   </div>
               </div>
               <div className='modal-footer'>
-                <button type='submit' className='btn btn-success' disabled={processing}>Sign In</button>
+                <div className='copyright-info'>Copyright &copy; 2016 <a href='https://bekti.io'>Bekti I/O</a></div>
+                <div className='modal-footer-right'>
+                  <button type='submit' className='btn btn-success' disabled={processing}>Sign In</button>
+                </div>
               </div>
             </form>
           </div>

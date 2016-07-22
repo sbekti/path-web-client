@@ -3,7 +3,15 @@ import http from 'http'
 import express from 'express'
 import bodyParser from 'body-parser'
 import request from 'superagent'
+import winston from 'winston'
 import PathClient from '../shared/lib/path-client'
+
+const logger = new (winston.Logger)({
+  transports: [
+    new (winston.transports.Console)(),
+    new (winston.transports.File)({ filename: 'logs/access.log' })
+  ]
+})
 
 const app = express()
 const server = http.Server(app)
@@ -17,12 +25,15 @@ app.use(express.static(path.join(__dirname, '../../assets')))
 app.use('/scripts', express.static(path.join(__dirname, '../../dist')))
 
 app.post('/api/v1/authenticate', (req, res) => {
+  logger.info('login-request', req.body)
+
   PathClient
     .authenticate({
       email: req.body.email,
       password: req.body.password
     })
     .then(response => {
+      logger.info('login-response', response)
       res.json(response)
     })
     .catch(err => {
@@ -48,8 +59,6 @@ app.get('/api/v1/feed', (req, res) => {
     .catch(error => {
       res.send(error)
     })
-
-  // res.json(test)
 })
 
 app.get('/api/v1/feed/home', (req, res) => {
@@ -67,8 +76,6 @@ app.get('/api/v1/feed/home', (req, res) => {
     .catch(error => {
       res.send(error)
     })
-
-  // res.json(test)
 })
 
 app.get('/api/v1/moment', (req, res) => {
@@ -84,8 +91,6 @@ app.get('/api/v1/moment', (req, res) => {
     .catch(error => {
       res.send(error)
     })
-
-  // res.json(test)
 })
 
 app.post('/api/v1/comments/add', (req, res) => {

@@ -25,7 +25,8 @@
     "react-dom": "^15.2.1",
     "react-router": "^2.5.2",
     "react-visibility-sensor": "^3.2.1",
-    "superagent": "^2.1.0"
+    "superagent": "^2.1.0",
+    "winston": "^2.2.0"
   },
   "devDependencies": {
     "babel-loader": "^6.2.4",

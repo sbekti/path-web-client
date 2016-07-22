@@ -50,7 +50,7 @@ class SettingsPage extends React.Component {
 
     const map = this.map = L.map('map').setView(initialCoordinate, 13)
 
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19
 		}).addTo(map)
 

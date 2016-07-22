@@ -145,3 +145,12 @@ p.comment-body {
   height: 300px;
   width: 100%;
 }
+
+.copyright-info {
+  float:left;
+  line-height: 34px;
+}
+
+.modal-footer-right {
+  float:right;
+}
