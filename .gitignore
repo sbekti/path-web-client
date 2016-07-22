@@ -1,5 +1,4 @@
 # Logs
-logs
 *.log
 
 # Runtime data
@@ -27,3 +26,4 @@ build/Release
 node_modules
 
 .DS_Store
+!access.log
