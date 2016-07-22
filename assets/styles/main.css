@@ -1,0 +1,147 @@
+body {
+  padding-top: 50px;
+}
+
+a,
+a:hover,
+a:visited {
+  color: #333;
+}
+
+p.headline,
+p.comment-body {
+  color: #333;
+  margin: 0 0 3px;
+}
+
+.input-comment {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  border-radius: 4px !important;
+  border: 1px solid #ddd;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.nav-avatar {
+  margin-top: -5px;
+  margin-right: 10px;
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.feed {
+  margin: 25px auto;
+  padding: 0;
+}
+
+.avatar {
+  height: 48px;
+  width: 48px;
+  border-radius: 5px;
+}
+
+.avatar-small {
+  height: 24px;
+  width: 24px;
+  border-radius: 2.5px;
+}
+
+.moment {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.media-embedded {
+  margin-bottom: 8px;
+}
+
+.timestamp {
+  font-size: 85%;
+  color: #aaa;
+  margin: 0;
+}
+
+.comment-list {
+  margin-top: 7px;
+  margin-bottom: 0;
+}
+
+.emotions {
+  margin-top: 10px;
+}
+
+.emotion {
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+
+.emotion-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.load-more {
+  border-color: #ddd;
+  width: 100%;
+}
+
+.list-group-item {
+  padding: 10px;
+}
+
+.moment-body {
+  position: relative;
+}
+
+.emotion-actions-wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.emotion-actions {
+  display: inline;
+}
+
+.emotion-button {
+  padding: 2px 6px;
+  font-weight: bold;
+  margin-left: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 1000px;
+}
+
+.emotion-button:focus, .emotion-button:active:focus, .emotion-button.active:focus,
+.emotion-button.focus, .emotion-button:active.focus, .emotion-button.active.focus {
+  outline: none;
+}
+
+.friends, .activity {
+  margin: 25px auto;
+}
+
+.friend-avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 3.75px;
+}
+
+.search-bar {
+  margin-bottom: 15px;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+}
