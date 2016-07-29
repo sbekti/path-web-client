@@ -12,13 +12,17 @@ class EmotionList extends React.Component {
     const { moment, users } = this.props
     const emotions = moment.get('emotions').get('users')
 
-    const nodes = emotions.map(emotion => {
-      const user = users.get(emotion.get('user_id'))
+    let nodes = null
 
-      return (
-        <Emotion key={emotion.get('id')} emotion={emotion} user={user} />
-      )
-    })
+    if (emotions) {
+      nodes = emotions.map(emotion => {
+        const user = users.get(emotion.get('user_id'))
+
+        return (
+          <Emotion key={emotion.get('id')} emotion={emotion} user={user} />
+        )
+      })
+    }
 
     return (
       <div className='emotions'>
